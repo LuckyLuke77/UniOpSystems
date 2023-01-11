@@ -44,7 +44,7 @@ int main(int argc, char **argv)
     	} else {	
 		PrintMessage("P0");
 		printf("\ncat is taking over!\n\n");
-		char *argv[] = {"cat", "test.c", 0};
+		char *argv[] = {"cat", "ex1.c", 0};
         	execvp(argv[0],argv);
 	}
     }
