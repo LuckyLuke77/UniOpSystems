@@ -1,4 +1,4 @@
-//COMPLISE WITH: gcc -pthread -o test3 test3.c
+//COMPLIE WITH: gcc -pthread -o ex2 ex2.c
 
 #include <stdio.h>
 #include <pthread.h>
@@ -21,7 +21,7 @@ void* thread(void* arg)
     } else {
 	message = "Hello ";
     }  
-sem_post(&mutex);
+    sem_post(&mutex);
 }
 
 int main() {
@@ -29,7 +29,7 @@ int main() {
     pthread_t t1,t2,t3,t4;
     int i = 0;
     while (i < 100) {
-pthread_create(&t1,NULL,thread,NULL);
+	pthread_create(&t1,NULL,thread,NULL);
 	pthread_create(&t2,NULL,thread,NULL);
 	pthread_create(&t3,NULL,thread,NULL);
 	pthread_create(&t4,NULL,thread,NULL);
